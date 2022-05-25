@@ -1,7 +1,7 @@
 import './FeaturedInfo.css'
 import {ArrowDownward, ArrowUpward} from '@material-ui/icons'
 
-export default function FeaturedInfo() {
+export default function FeaturedInfo({data}) {
   return (
     <div className='featured'>
         <div className="featuredItem">
