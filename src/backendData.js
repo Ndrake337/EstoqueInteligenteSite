@@ -9,6 +9,8 @@ export const Data = [
     [
         {title:'Balanço de Inventario',Data: 15, origin: 'custo',Rate: 2},
         {title:'Balanço Financeiro', Data: 50.00, origin: 'inventario',Rate: -2},
+    ],
+    [
+        {name: 'Slot 1', amountOfProducts: 3, last_Update: '2022-05-10'},
     ]
-
 ];

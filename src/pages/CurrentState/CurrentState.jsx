@@ -1,16 +1,21 @@
 import "./CurrentState.css"
 import MonitorWeightIcon from '@mui/icons-material/MonitorWeight';
-export default function CurrentState() {
+
+export default function CurrentState({data}) {
+  const listDevices = data.map((data) =>
+    <div className="currentStateData" key={data}>
+      <span className="slot">{data.name}</span>
+      <MonitorWeightIcon className="WeightIcon" style={{ fontSize: 500 }} />
+      <span className="title">Quantidade de Produtos: {data.amountOfProducts} Unidades</span>
+      <span className="updatedDate">Ultima atualização em: {data.last_Update}</span>
+    </div>
+  );
   return (
+
     <div className="CurrentState">
-        <div className="CurrentStateContainer">
-          <div className="currentStateData">
-            <span className="slot">Slot 1</span>
-            <MonitorWeightIcon className="WeightIcon" style={{fontSize: 500}}/>
-            <span className="title">Peso Atual: </span>
-            <span className="updatedDate">Ultima atualização em: </span>
-            </div>
-        </div>
+      <div className="CurrentStateContainer">
+        {listDevices}
+      </div>
     </div>
   )
 }

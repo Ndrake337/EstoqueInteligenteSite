@@ -4,7 +4,7 @@ import {ArrowDownward, ArrowUpward} from '@material-ui/icons'
 
 export default function FeaturedInfo({data}) {
   
-  const listItems = data.map((data) =>
+  const listBigData = data.map((data) =>
         <div className="featuredItem" key={data}>
             <span className='featureTitle'>{data.title}</span>
             <div className='featureDataContainer'>
@@ -17,7 +17,7 @@ export default function FeaturedInfo({data}) {
 
   return (
     <div className='featured'>
-      {listItems}
+      {listBigData}
     </div>
   )
 }
