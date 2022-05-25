@@ -1,37 +1,23 @@
 import './FeaturedInfo.css'
 import {ArrowDownward, ArrowUpward} from '@material-ui/icons'
 
+
 export default function FeaturedInfo({data}) {
-  return (
-    <div className='featured'>
-        <div className="featuredItem">
-            <span className='featureTitle'>Balanço de Inventario</span>
+  
+  const listItems = data.map((data) =>
+        <div className="featuredItem" key={data}>
+            <span className='featureTitle'>{data.title}</span>
             <div className='featureDataContainer'>
-                <span className='featureData'> 15 unidades</span>
-                <span className='featureDataRate'> -2 <ArrowDownward className='featuredIconNegative'/> </span>
+                <span className='featureData'>{data.origin ==='custo'?`R$ ${data.Data}`:`${data.Data} Unidades`}</span>
+                <span className='featureDataRate'> {data.Rate} {data.Rate < 0 ? <ArrowDownward className='featuredIconNegative'/> : <ArrowUpward className='featuredIconPositive'/>} </span>
             </div>
             <span className='featuredSub'>Comparativo do dia</span>
         </div>
+    );
 
-        <div className="featuredItem">
-          <span className='featureTitle'>Balanço Financeiro</span>
-          <div className='featureDataContainer'>
-              <span className='featureData'> R$ 16,00</span>
-              <span className='featureDataRate'> + R$2,00 <ArrowUpward className='featuredIconPositive'/> </span>
-          </div>
-          <span className='featuredSub'>Comparativo do dia</span>
-        </div>
-        
-        <div className="featuredItem">
-          <span className='featureTitle'>Balanço Financeiro</span>
-          <div className='featureDataContainer'>
-              <span className='featureData'> R$ 16,00</span>
-              <span className='featureDataRate'> + R$2,00 <ArrowUpward className='featuredIconPositive'/> </span>
-          </div>
-          <span className='featuredSub'>Comparativo do dia</span>
-        </div>
-      </div>
-
-    
+  return (
+    <div className='featured'>
+      {listItems}
+    </div>
   )
 }

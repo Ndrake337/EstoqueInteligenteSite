@@ -7,8 +7,8 @@ export const Data = [
         {Mes: 'Maio', Quantidade: 2181},
     ],
     [
-        {title:'Balanço de Inventario',Data: 15 ,Rate: -2},
-        {title:'Balanço Financeiro', Data: 15 ,Rate: -2},
+        {title:'Balanço de Inventario',Data: 15, origin: 'custo',Rate: 2},
+        {title:'Balanço Financeiro', Data: 50.00, origin: 'inventario',Rate: -2},
     ]
 
 ];
