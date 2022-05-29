@@ -1,7 +1,8 @@
-body{
+body {
     background-color: #242933;
 }
-.Home{
+
+.Home {
     flex: 4;
     width: 100%;
 }

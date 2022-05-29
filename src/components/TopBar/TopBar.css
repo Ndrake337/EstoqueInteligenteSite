@@ -1,4 +1,4 @@
-.TopBar{
+.TopBar {
     display: flex;
     flex: 4;
     align-content: center;
@@ -6,7 +6,8 @@
     float: center;
 
 }
-.TopBarContainer{
+
+.TopBarContainer {
     width: 100%;
     display: flex;
     background-color: #2E3440;
@@ -19,17 +20,17 @@
     padding-right: 12%;
 }
 
-.TopBarIcon{
+.TopBarIcon {
     height: 100%;
     display: flex;
 }
 
-.Menu{
+.Menu {
     width: 100%;
     overflow: hidden;
 }
 
-.MenuBar a{
+.MenuBar a {
     float: left;
     color: #D8DEE9;
     text-align: center;
@@ -38,7 +39,7 @@
     font-size: 17px;
 }
 
-.MenuBar a:hover{
+.MenuBar a:hover {
     background-color: #D8DEE9;
     color: #2E3440;
 }

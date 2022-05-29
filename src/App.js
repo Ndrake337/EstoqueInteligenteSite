@@ -4,7 +4,7 @@ import Home from './pages/Home/Home';
 import CurrentState from './pages/CurrentState/CurrentState';
 import AddNewProducts from './pages/AddNewProduct/AddNewProducts';
 import ChangeProductOnShelf from './pages/ChangeProductOnShelf/ChangeProductOnShelf'
-import {Data} from './backendData'  
+import { Data } from './backendData'
 
 import {
   BrowserRouter as Router,
@@ -16,13 +16,13 @@ function App() {
   console.log(Data.length)
   return (
     <div className='Container'>
-    <TopBar />
+      <TopBar />
       <Router>
         <Routes >
           <Route exact path='/' element={<Home />} />
-          <Route path='/CurrentState' element={<CurrentState data={Data[2]}/>} />
-          <Route path='/AddNewProducts' element={<AddNewProducts />} />
-          <Route path='/ChangeProductOnShelf' element={<ChangeProductOnShelf dataShelfs={Data[3]} dataProducts={Data[4]}/>} />
+          <Route path='/CurrentState' element={<CurrentState data={Data[2]} />} />
+          <Route path='/ProductHandler' element={<AddNewProducts dataProducts={Data[4]} />} />
+          <Route path='/ShelfHandler' element={<ChangeProductOnShelf dataShelfs={Data[3]} dataProducts={Data[4]} />} />
         </Routes>
 
       </Router>

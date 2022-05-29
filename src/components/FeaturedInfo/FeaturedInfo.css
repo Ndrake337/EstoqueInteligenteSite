@@ -1,4 +1,4 @@
-.featured{
+.featured {
     padding-top: 20px;
     width: 100%;
     display: flex;
@@ -6,7 +6,7 @@
 
 }
 
-.featuredItem{
+.featuredItem {
     flex: 1;
     background-color: #2E3440;
     color: #D8DEE9;
@@ -14,46 +14,46 @@
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 20px -10px #000000; 
+    -webkit-box-shadow: 0px 0px 20px -10px #000000;
     box-shadow: 0px 0px 20px -10px #000000;
 }
 
-.featureTitle{
+.featureTitle {
     font-size: 20px;
 }
 
-.featureDataContainer{
-    margin: 10px 0px ;
+.featureDataContainer {
+    margin: 10px 0px;
     display: flex;
     align-items: center;
 }
 
-.featureData{
+.featureData {
     font-size: 30px;
     font-weight: 600;
     flex: 1;
-    align-items:center ;
+    align-items: center;
 }
 
-.featureDataRate{
+.featureDataRate {
     display: flex;
     align-items: center;
     margin-left: 50px;
 }
 
-.featuredIconPositive{
+.featuredIconPositive {
     font-size: 14px;
-    margin-left: 5px;    
+    margin-left: 5px;
     color: green;
 }
 
-.featuredIconNegative{
+.featuredIconNegative {
     font-size: 14px;
     margin-left: 5px;
     color: red;
 }
 
-.featuredSub{
+.featuredSub {
     font-size: 14px;
     margin-left: 5px;
     color: gray;

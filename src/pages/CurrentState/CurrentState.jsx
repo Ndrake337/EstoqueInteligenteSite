@@ -1,7 +1,7 @@
 import "./CurrentState.css"
 import MonitorWeightIcon from '@mui/icons-material/MonitorWeight';
 
-export default function CurrentState({data}) {
+export default function CurrentState({ data }) {
   const listDevices = data.map((data) =>
     <div className="currentStateData" key={data}>
       <span className="slot">{data.name}</span>
