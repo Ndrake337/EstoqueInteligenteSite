@@ -1,7 +1,12 @@
 .InventoryPerDate{
-    flex: 4;
     display: flex;
+    flex: 4;
     margin-top: 20px;
+}
+
+ResponsiveContainer, BarChart{
+    display: flex;
+    position: absolute
 }
 
 .ChartContainer{

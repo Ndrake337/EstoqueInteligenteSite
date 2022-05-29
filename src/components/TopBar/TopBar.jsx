@@ -12,6 +12,7 @@ export default function TopBar() {
           <a href='/'> Home </a>
           <a href='/CurrentState'> Estado Atual </a>
           <a href='/AddNewProducts'> Cadastro de Produtos </a>
+          <a href='/ChangeProductOnShelf'> Atualizar Prateleira </a>
         </div>
       </div>
     </div>
