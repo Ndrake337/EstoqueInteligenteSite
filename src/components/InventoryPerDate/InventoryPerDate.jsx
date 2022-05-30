@@ -10,7 +10,7 @@ export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
     
     const getData = () => {
 
-        var url = 'http://estoqueinteligente-env.eba-hd3cumpg.us-east-2.elasticbeanstalk.com/dashboard'
+        var url = 'https://estoque-inteligente.herokuapp.com/dashboard'
 
         Axios.get(url).then((result) => {
             
