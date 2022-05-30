@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className='Home'>
       <FeaturedInfo data={Data[1]} />
-      <InventoryPerDate data={Data[0]} title='Histórico de Inventario' dataKeyX="Mes" dataKeyY="Quantidade" />
+      <InventoryPerDate dt={Data[0]} title='Histórico de Inventario' dataKeyX="Mes" dataKeyY="Quantidade" />
     </div>
   )
 }
