@@ -10,7 +10,7 @@ export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
     
     const getData = () => {
 
-        var url = 'https://estoque-inteligente.herokuapp.com/dashboard'
+        var url = 'https://apiestoqueinteligente.herokuapp.com/dashboard'
 
         Axios.get(url).then((result) => {
             
