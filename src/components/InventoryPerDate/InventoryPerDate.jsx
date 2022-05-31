@@ -46,7 +46,7 @@ export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
                         <Tooltip cursor={false} />
                         <XAxis dataKey={'mes'} stroke="#ECEFF4" />
                         <YAxis dataKey={'quantidade'} stroke="#ECEFF4" />
-                        <Bar type="monotone" dataKey={'quantidade'} fill="#ECEFF4" />
+                        <Bar type="monotone" dataKey={'quantidade'} fill="#5E6A82" />
                         {grid && <CartesianGrid stroke='#D8DEE9' strokeDashoffset="5 5" />}
                     </BarChart>
                 </ResponsiveContainer>
