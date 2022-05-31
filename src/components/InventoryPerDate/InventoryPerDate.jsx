@@ -2,7 +2,8 @@ import '../InventoryPerDate/InventoryPerDate.css'
 import { BarChart, Bar, XAxis, ResponsiveContainer, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import { useState } from 'react';
 import Axios from 'axios';
-
+Axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
+Axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
 
 export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
     
