@@ -2,19 +2,25 @@ import '../InventoryPerDate/InventoryPerDate.css'
 import { BarChart, Bar, XAxis, ResponsiveContainer, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import { useState } from 'react';
 import Axios from 'axios';
-Axios.defaults.headers.post['Content-Type'] ='application/json;charset=utf-8';
-Axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+
 
 export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
-    
+    Axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+    Axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
     const [Dados, setDados] = useState("")
-    
+
     const getData = () => {
 
         var url = 'https://apiestoqueinteligente.herokuapp.com/dashboard'
 
-        Axios.get(url).then((result) => {
-            
+        Axios.get(url, {
+            headers: {
+                'x-apikey': '59a7ad19f5a9fa0808f11931',
+                'Access-Control-Allow-Origin' : '*',
+                'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            }
+        }).then((result) => {
+
             //console.log(result.data);
             for (let key of result.data) {
                 for (const value in key) {
