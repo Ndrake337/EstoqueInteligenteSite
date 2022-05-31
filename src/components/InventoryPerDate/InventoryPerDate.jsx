@@ -5,8 +5,6 @@ import Axios from 'axios';
 
 
 export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
-    Axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
-    Axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
     const [Dados, setDados] = useState("")
 
     const getData = () => {
@@ -15,15 +13,16 @@ export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
 
         Axios.get(url, {
             headers: {
-                'x-apikey': '59a7ad19f5a9fa0808f11931',
-                'Access-Control-Allow-Origin' : '*',
+                "X-API-KEY": "__KEY__",
+                "Access-Control-Allow-Origin": "true",
                 'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-            }
+            },
         }).then((result) => {
 
             //console.log(result.data);
             for (let key of result.data) {
                 for (const value in key) {
+                    console.log(value)
                     key['mes'] = key['0'];
                     key['quantidade'] = key['1'];
                 }
