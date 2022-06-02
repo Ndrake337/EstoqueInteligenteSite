@@ -25,7 +25,7 @@ export default function FeaturedInfo() {
 
   const listBigData = BigNumbersData.map((BigNumbersData) =>
     <div className="featuredItem" key={BigNumbersData}>
-      <span className='featureTitle'>Teste</span>
+      <span className='featureTitle'>Balanço {BigNumbersData.origin === 'custo' ? `Financeiro` : `Inventario`}</span>
       <div className='featureDataContainer'>
         <span className='featureData'>{BigNumbersData.origin === 'custo' ? `R$ ${BigNumbersData.balanco.toFixed(2)}` : `${BigNumbersData.balanco} Unidades`}</span>
         <span className='featureDataRate'> {BigNumbersData.value} {BigNumbersData.value < 0 ? <ArrowDownward className='featuredIconNegative' /> : <ArrowUpward className='featuredIconPositive' />} </span>

@@ -2,7 +2,6 @@ import '../InventoryPerDate/InventoryPerDate.css'
 import { BarChart, Bar, XAxis, ResponsiveContainer, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import { useState } from 'react';
 import Axios from 'axios';
-import { RefreshIcon } from '@mui/icons-material';
 
 
 export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
