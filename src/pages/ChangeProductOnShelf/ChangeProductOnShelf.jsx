@@ -22,7 +22,7 @@ export default function AddNewProducts({ dataShelfs, dataProducts }) {
       });
       console.log(res)
       let resJson = await res.json();
-
+      console.log(resJson)
       if (res.status === 200) {
         setshelfName("");
         setproductName("");
