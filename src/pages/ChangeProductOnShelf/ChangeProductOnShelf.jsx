@@ -12,12 +12,13 @@ export default function AddNewProducts({ dataShelfs, dataProducts }) {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("http://127.0.0.1:5000/atualizaProdutoPrateleira", {
+      let res = await fetch("https://apiestoqueinteligente.herokuapp.com/atualizaProdutoPrateleira", {
         method: "POST",
-        headers: {
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
           nome_produto: productName,
-          nome_prateleira: productName,
-        },
+          nome_prateleira: Number(shelfName.replace('Prateleira ','')),
+        }),
       });
       console.log(res)
       let resJson = await res.json();
@@ -36,7 +37,6 @@ export default function AddNewProducts({ dataShelfs, dataProducts }) {
 
 
   const AvailableShelfs = dataShelfs.map((dataShelfs) =>
-
     <option key={dataShelfs} id={dataShelfs.shelfId} >{dataShelfs.shelfName}</option>
   );
 
@@ -62,8 +62,9 @@ export default function AddNewProducts({ dataShelfs, dataProducts }) {
                 autoFocus 
                 placeholder='Selecione o Produto' 
                 list='AvailableProducts' 
+                
                 required>
-
+                <option selected value={''} > -- select an option -- </option>
                 {AvailableProducts}
 
               </select>
@@ -80,6 +81,7 @@ export default function AddNewProducts({ dataShelfs, dataProducts }) {
                 placeholder='Selecione a Prateleira' 
                 list='AvailableShelfs' 
                 required>
+                <option selected value={''} > -- select an option -- </option>
                 {AvailableShelfs}
               </select>
             </fieldset>

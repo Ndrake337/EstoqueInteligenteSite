@@ -21,10 +21,7 @@ export const Data = [
         {shelfId:5,shelfName:'Prateleira 5'},
     ],
     [
-        {productId: 1,productName:'Produto 1'},
-        {productId: 2,productName:'Produto 2'},
-        {productId: 3,productName:'Produto 3'},
-        {productId: 4,productName:'Produto 4'},
-        {productId: 5,productName:'Produto 5'},
+        {productId: 1,productName:'Anti-pulgas'},
+        {productId: 2,productName:'Leite Condensado Moça'},
     ]
 ];
