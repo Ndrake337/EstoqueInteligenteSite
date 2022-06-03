@@ -1,6 +1,6 @@
 import '../InventoryPerDate/InventoryPerDate.css'
 import { BarChart, Bar, XAxis, ResponsiveContainer, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Axios from 'axios';
 
 
@@ -21,7 +21,11 @@ export default function InventoryPerDate({ title, dataKeyX, dataKeyY, grid }) {
             setChartData(result.data)
         });
     }
-    getDataChart()
+    
+    useEffect(() => {
+        getDataChart();
+      }, []);
+    
     return (
         <div className="InventoryPerDate" >
             <div className="ChartContainer">
