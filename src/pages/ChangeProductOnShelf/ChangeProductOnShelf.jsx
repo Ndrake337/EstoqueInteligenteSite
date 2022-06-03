@@ -89,8 +89,8 @@ export default function AddNewProducts({ dataShelfs, dataProducts }) {
             <button type="submit">Cadastrar um Produto</button>
 
           </form>
-          <div className="message">{message ? <p>{message}</p> : null}</div>
         </div>
+        {console.log(message)}
       </div>
     </div>
   )
